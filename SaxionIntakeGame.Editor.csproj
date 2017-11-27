@@ -315,9 +315,11 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
-    <None Include="Assets\Fruit Pack\Shaders\ToonLit.shader" />
-    <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
+    <None Include="Assets\Downloaded\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="Assets\Downloaded\Fruit Pack\Shaders\ToonLit.shader" />
+    <None Include="Assets\Downloaded\Fruit Pack\Shaders\ToonLitTransparent.shader" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineBufferShader.shader" />
+    <None Include="Assets\OutlineEffect\Resources\OutlineShader.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
