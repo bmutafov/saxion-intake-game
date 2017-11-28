@@ -11,7 +11,7 @@ public class ReloadScene : MonoBehaviour
 
 	private void Start ()
 	{
-		DisplayLevelOnUI();
+		DisplayNewLevelOnUI();
 	}
 
 	public void Reload ()
@@ -36,7 +36,7 @@ public class ReloadScene : MonoBehaviour
 
 		maze.SpawnMaze();
 
-		DisplayLevelOnUI();
+		DisplayNewLevelOnUI();
 	}
 
 	private void UpdateMazeSize ()
@@ -58,9 +58,9 @@ public class ReloadScene : MonoBehaviour
 		FindObjectOfType<PlayerStats>().Reset();
 	}
 
-	private void DisplayLevelOnUI ()
+	private void DisplayNewLevelOnUI ()
 	{
-		levelUI.text = "Level " + level + " |  Maze size: " + (10 + level);
+		levelUI.text = "Level " + level;
 	}
 
 	

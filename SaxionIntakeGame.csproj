@@ -222,6 +222,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Decal.cs" />
+    <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalBuilder.cs" />
+    <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Utils\DecalUtils.cs" />
+    <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Utils\MeshBuilder.cs" />
+    <Compile Include="Assets\DecalSystem\Plugins\DecalSystem\Utils\PolygonClippingUtils.cs" />
     <Compile Include="Assets\Downloaded\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\Downloaded\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\Downloaded\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -295,7 +300,9 @@
     <Compile Include="Assets\Scripts\Banana.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CharacterMove.cs" />
+    <Compile Include="Assets\Scripts\DecalProjector.cs" />
     <Compile Include="Assets\Scripts\FillBar.cs" />
+    <Compile Include="Assets\Scripts\FollowDecal.cs" />
     <Compile Include="Assets\Scripts\IPickUp.cs" />
     <Compile Include="Assets\Scripts\LoadLevel.cs" />
     <Compile Include="Assets\Scripts\Pickable.cs" />
@@ -303,6 +310,7 @@
     <Compile Include="Assets\Scripts\ReloadScene.cs" />
     <Compile Include="Assets\Scripts\Strawberry.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
+    <Compile Include="Assets\Scripts\UI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark02.cs" />

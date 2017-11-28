@@ -152,6 +152,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.FillBar
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:cakeslice.Rotate
 020550babdb991365f61c5bffe1f4f52 Assembly-CSharp.dll:TMPro.Examples.Benchmark03
+790b7f9574fb4abf87230075b251b1a6 Assembly-CSharp.dll:.FollowDecal
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.UI
 b9332c0eee630779376843b5343eb250 Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
 b7536247a550bc1596505b7f345c8adf Assembly-CSharp.dll:.GunAim
 f0bdc1041dee6504f25216b38b2bb3cb TextMeshPro-1.0.55.2017.2.0b12.dll:TMPro.InlineGraphic
@@ -182,9 +184,10 @@ dad1c1272dfe1898bb613dcb2631bcce Assembly-CSharp.dll:TMPro.Examples.Benchmark02
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TeleType
 8a50d3d11bf0cc541f5c35347dd25633 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
+790b7f9574fb4abf87230075b251b1a6 Assembly-CSharp.dll:.DecalProjector
 76015de5fcb247eeb8df66c001d5a22d Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 b8f04bdad423045528c67dfa4c3dca0d Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
-f3988ecd76139cca1bbaddf5481c3a80 Assembly-CSharp.dll:.CharacterMove
+041721e5b8417fc2ec378dc61a576f61 Assembly-CSharp.dll:.CharacterMove
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -207,6 +210,7 @@ ecdb69137a9851d25fca1862751a3a88 Assembly-CSharp.dll:.Apple
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 aa9d1bd0cc771545f2ae1f63a6d0ed6a Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+4517c32d0f9d42d549480b987c388af9 Assembly-CSharp.dll:_Decal.Decal
 f0f0ab6b8a39d0572cfa4ea315d84fbf Assembly-CSharp.dll:TMPro.Examples.Benchmark04
 3d8fe8966e9b05bbd4143afd21bfa360 Assembly-CSharp.dll:cakeslice.MaterialSwitcher
 29273f491d11f6bdd02a43a9d8df84c7 Assembly-CSharp.dll:TMPro.Examples.TMP_ExampleScript_01

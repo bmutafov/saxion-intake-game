@@ -135,15 +135,13 @@ public class MazeSpawner : MonoBehaviour
 		Vector3 floorPos = GetFloorPosition();
 		string gameObjectName = "Floor" + floorPos;
 
-		Debug.Log(gameObjectName);
-
 		var floorTarget = GameObject.Find(gameObjectName);
 
 		AddRequiredTargetComponents(floorTarget);
 	}
 
 	private void AddRequiredTargetComponents ( GameObject floorTarget )
-	{ 
+	{
 		floorTarget.tag = "Target";
 		floorTarget.GetComponent<Renderer>().material = targetMaterial;
 		floorTarget.AddComponent<Target>();

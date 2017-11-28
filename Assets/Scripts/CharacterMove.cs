@@ -5,9 +5,30 @@ public class CharacterMove : MonoBehaviour
 {
 	public float characterSpeed = 0.1f;
 	public float turnSpeed = 10;
+	public float inMotionMultiplier = 2;
 	public GameObject particles;
+	public GameObject decal;
+	public GameObject decalInfo;
 
-	public bool CanSkipWalls = false;
+	private bool canSkipWalls = false;
+	public bool CanSkipWalls
+	{
+		get
+		{
+			return canSkipWalls;
+		}
+
+		set
+		{
+			decal.SetActive(value);
+			decalInfo.SetActive(PlayerPrefs.HasKey("helpInfo") ? false : value);
+			if ( !PlayerPrefs.HasKey("helpInfo") )
+			{
+				PlayerPrefs.SetInt("helpInfo", 1);
+			}
+			canSkipWalls = value;
+		}
+	}
 
 	private CharacterController charController;
 	private Animator animator;
@@ -47,34 +68,26 @@ public class CharacterMove : MonoBehaviour
 
 	private void SkippWalls ()
 	{
-		if ( CanSkipWalls && Input.GetButtonDown("Fire1") )
+		if ( CanSkipWalls && Input.GetKeyDown("e") )
 		{
-			RaycastHit hit;
-
-			if ( Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100) )
-			{
-				if ( hit.transform.CompareTag("Floor") && Vector3.Distance(transform.position, hit.point) < 5 )
-				{
-					CanSkipWalls = false;
-					StartCoroutine(TeleportPlayer(hit));
-				}
-			}
+			CanSkipWalls = false;
+			StartCoroutine(TeleportPlayer(decal.transform.position));
 		}
 	}
 
-	private IEnumerator TeleportPlayer ( RaycastHit hit )
+	private IEnumerator TeleportPlayer ( Vector3 position )
 	{
 		ChangeRenderesState(false);
 		var currentPosPart = Instantiate(particles, transform.position, Quaternion.identity);
 
 		yield return new WaitForSeconds(0.5f);
 
-		var newPosPart = Instantiate(particles, hit.point, Quaternion.identity);
+		var newPosPart = Instantiate(particles, position, Quaternion.identity);
 
 		yield return new WaitForSeconds(0.2f);
 
 		ChangeRenderesState(true);
-		transform.position = hit.point;
+		transform.position = position;
 
 		yield return new WaitForSeconds(2f);
 
@@ -82,7 +95,7 @@ public class CharacterMove : MonoBehaviour
 		Destroy(newPosPart);
 	}
 
-	private void ChangeRenderesState (bool state)
+	private void ChangeRenderesState ( bool state )
 	{
 		for ( int i = 0 ; i < renderers.Length ; i++ )
 		{
@@ -102,9 +115,9 @@ public class CharacterMove : MonoBehaviour
 	{
 		if ( direction != Vector3.zero )
 		{
-			targetRotation = Quaternion.LookRotation(direction * Time.deltaTime * 100f);
+			targetRotation = Quaternion.LookRotation(direction);
 		}
-		transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, (float)(charController.velocity.magnitude > 1 ? turnSpeed * 1.5 : turnSpeed) * Time.deltaTime);
+		transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, (charController.velocity.magnitude > 5 ? turnSpeed * inMotionMultiplier : turnSpeed) * Time.deltaTime);
 	}
 
 	private void PlayAnimation ()
